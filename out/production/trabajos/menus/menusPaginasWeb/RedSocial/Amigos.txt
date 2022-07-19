@@ -1,0 +1,4 @@
+Viendo amigos
+	1. Seleccionar perfil de amigo
+	2. Atras
+	3. Volver al menu principal

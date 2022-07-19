@@ -1,0 +1,4 @@
+Mirando canal:
+	1. Subir video
+	2. Atras
+	3. Menu principal

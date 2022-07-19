@@ -1,0 +1,5 @@
+Tu carrito:
+	Tus productos son...
+	1. Check out
+	2. Ir al menu principal
+	3. Atras

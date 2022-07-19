@@ -1,0 +1,3 @@
+Viendo la pelicula:
+	1. Atras
+	2. Menu inicial

@@ -1,0 +1,6 @@
+Perfil:
+	1. Ver foto 
+	2. Ver descripcion
+	3. Ver publicaciones
+	4. Atras
+	5. Volver al menu principal

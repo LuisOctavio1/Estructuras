@@ -1,0 +1,5 @@
+Peliculas de terror:
+	1. El conjuro
+	2. El exsorcista
+	3. Atras
+	4. Menu inicial

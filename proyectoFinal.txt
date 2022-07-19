@@ -1,0 +1,18 @@
+a) Probabilidad de que el escenario inicie con un tiempo especifico:
+	¿Cuál es la probabilidad de que el clima inicie soleado?
+	¿Cuál es la probabilidad de que el clima inicie nublado?
+	¿Cuál es la probabilidad de que el clima inicie lluvioso?
+	¿Cuál es la probabilidad de que el clima inicie despejado?
+
+b) Probabilidad de que los investigadores hagan cierta actividad ese día:
+	¿Cuál es la probabilidad de que los investigadores realizen el muestreo ese día?
+	¿Cuál es la probabilidad de que los investigadores realizen la parcela ese día?
+	¿Cuál es la probabilidad de que los investigadores realizen el indice de riquesa natural ese día?
+
+c) Probabilidad de que el día esté en cierto estado:
+	¿Cuál es la probabilidad de que al dia siguiente el clima inicie soleado?
+	¿Cuál es la probabilidad de que al dia siguiente el clima inicie nublado?
+	¿Cuál es la probabilidad de que al dia siguiente el clima inicie lluvioso?
+	¿Cuál es la probabilidad de que el clima inicie despejado?
+
+d) Probabilidad de que se de cierta secuencia de climas:

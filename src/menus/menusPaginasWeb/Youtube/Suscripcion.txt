@@ -1,0 +1,4 @@
+Viendo suscripcion:
+	1. Ver video
+	2. Atras
+	3. Menu inicial

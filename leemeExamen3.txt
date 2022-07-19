@@ -1,0 +1,85 @@
+RedesBayesianas:
+src.herramientas.matematicas
+Clase que maneja las redes Bayesianas, tiene una listaTablas la cual tendra una lista con tadas las tablas y sus prbabilidades,
+tiene los metodos:
+RedesBayesianas(int numNodos): Constructor de las red bayesiana la cual tiene como paramtro numero de nodos
+y crea un grafo a partir de este.
+
+boolean agregarNodo(Object nodo):Metodo que agrega un nodo al grafo.
+
+boolean agregarRelacion(Object salida, Object destino): Metodo que agrega una dependencia(una arista)
+
+void generarLista(Object nodo): Metodo que genera una lista de tamaño 2^cantidadDePadres+1, en el 
+primer espacio estara el nombre del nodo
+
+int obtenerTabla(Object nodo): Metodo que obtiene el indice de la tabla de valores de la lista de valores, en caso de que no se encuentr
+-1
+
+ boolean agregarProbabilidad(Object nodo, double valor,ListaEstatica casos):
+Metodo que agrega una probabilidad a la lista correspondiente del nodo y del caso.
+
+double encontrarProbabilidad(Object nodo,ListaEstatica casos,int opcion): Metodo que encuentra una probabilidad y la devuelve
+, el valor opcion es para si el usuario escoje 1 le da la probabilidad de que pase, en caso contrario la probabilidad de que no pase.
+
+double pedirValidaciones(Object nodo): Metodo que pide validaciones de un nodo, 
+por ejemplo, si ingresas el nodo disnea te preguntara si tienes cancer, si tienes bronquitis y si tienes tuberculosis y de ahi
+obtendra la lista de validaciones(por ejemplo true, false, true) y buscara la probabilidad de esa validacion.
+
+double probabilidadConjunta(ListaEstatica nodos): Metodo que obtiene la probabilidad conjunta de dos o mas nodos, obteniendo
+los nodos de la lista nodos, donde vendran los nombres.
+
+TipoCaso:
+src.herramientas.generales
+Esta clase sera el objeto que meteremos en la lista conformado por el valor(probabilidad) y las lista de validaciones, 
+tiene los metodos metodos solo seon get y set de los dos valores(valor y validaciones)
+
+ListaValidaciones:
+src.herramientas.generales
+Este es una clase que ayuda a no crear tantas listas de validaciones, en vez de crear por ejemplo una lista con true false, pasamos en el parametro
+un new ListaValidaciones(true,false), este tiene tres constructores, con uno, dos y tres espacios para poner falsos respectivamente,
+que serian asi
+ListaValidaciones(boolean validacion)
+ListaValidaciones(boolean validacion,boolean validacion2)
+ListaValidaciones(boolean validacion,boolean validacion2,boolean validacion3), los cuales generan una lista con los true y false que pongas
+ademas de un getValidaciones que regresa la lista que genero el constructor.
+
+MenuRedesBayesianas:
+src.menus
+Clase que tiene todo lo necesario para manejar en consola los menus para el usuario de las redes bayesianas en el caso especifico que cree.
+
+static void imprimirMenu():Imprime el menu principal que tiene esta forma
+
+Bienbenido, selecciona la opcion que quieras hacer:
+1. Probabilidad de un elemento
+2. Probabilidad conjunta
+3. Salir
+
+static void imprimirMenuElemento():
+imprime un submenu para elegir un nodo
+Elige la opcion que deseas calcular(ingresa el numero)
+1. Fuma
+2. Cancer
+3. Bronquitis
+4. Tuberculosis
+5. Dolor de pecho
+6. Disnea
+7. Escalofrios
+
+static double elegirOpcion(): Metodo que pide un numero como opcion
+
+static void seleccionarOpcion(RedesBayesianas redes): Metodo que llaman las demas clases que imprimira el menu principal y llamara
+a el caso uno (obtener una probabilidad) o el caso dos(probabilidad combinada)
+
+static void probabilidadConjunta(RedesBayesianas redes): Metodo que pide los nodos para hacer la probabilidad conjunta y llama a los metodos 
+para calculalo e imprimirlo.
+
+static void obtenerProbabilidad(RedesBayesianas redes): Metodo que obtiene la probabilidad de un nodo en especifico para despues llamar a otro metodo e imprimirlo.
+
+static String obtenerNombre(): Metodo que pide un numero el cual esta relacionado con un nodo y devuelve el nombre de este.
+
+static void imprimirProbabilidad(double probabilidad): Metodo que imprime la probabilidad pasada por parametro.
+
+PruebaBayes:
+src.pruebas
+Clase que tiene el metodo main y comienza el prgrama.
+

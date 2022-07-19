@@ -1,0 +1,4 @@
+Viendo suscripciones:
+	1. Ver canal
+	2. Atras
+	3. Menu inicial

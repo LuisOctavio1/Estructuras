@@ -1,0 +1,4 @@
+Menu red social:
+	1. Perfil
+	2. Amigos
+	3. Regresar

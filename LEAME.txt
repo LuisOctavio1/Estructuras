@@ -1,0 +1,110 @@
+Nueva clase localizada en herramientas.validacion, llamada ValidacionProgramas.java, Esta clase se encarga de la parte de validacion de archivos con formato de clase
+de java
+Metodos:
+static PilaEstatica validarPrograma(ListaEstatica programa): Metodo que llamaran las demas clases  y validara el archivo de texto
+
+static boolean esCaracterDeApertura(char caracter,char caracterSiguiente): Metodo que indica si un caracter es caracter de apertura.
+
+static boolean esCaracterDeCierre(char caracter,char caracterSiguiente): Metodo que indica si un caracter es caracter de cierre
+
+ static boolean validarCierre(char caracter, PilaEstatica pila, char caracterSiguiente): metodo que se llama cuando se encuetra un caracter
+de cierre, el cual indica con la pila de caracteres de apertura si se esta cerrando correctamente o no
+
+static ListaEstatica crearListaCaracterIndice(String caracter, int linea, int numeroCaracter): Metodo que crea una lista que ira dentro de la pila
+la cual contendra el caracter de apertura, el indice de en que linea se encuentra y la posicion de donde se encuentra el simbolo en la linea correspondiente.
+
+
+
+
+
+Nuevos metodos en la clase ExpresionesAritmeticas(herramientas.matematicas) a partir de la linea 256 
+Metodos:
+static PilaEstatica validarExpresion(String expresion):Metodo que valida una exprecion aritmetica en el sentido de apertura y cierre de indices, este es el 
+metodo que llamaran las demas clases, recorre caracter por caracter y si encuentra un caracter de apertura lo mete en la pila, cuando encuentra uno de cierre
+valida que sea correspondiente al ultimo de la pila y si no lo es regresa la pila, si todo esta correctamente regresa la pila, pero esta estara vacia.
+
+static boolean esCaracterApertura(char caracter): Metodo que confirma si un caracter es de apertura('(', '[' '{') o no.
+
+static boolean esCaracterCierre(char caracter):Metodo que indica si un caracter es de cierre(')', ']', '}' ) o no 
+
+static boolean validarCierre(char caracter, PilaEstatica pila): Metodo que valida si se cierra un caracter de apertura correctamente, esta validadndo si
+el caracter de la pila es por ejemplo '(' el caracter que se encuentre de cierre sea este ')', en caso de que esto no sea asi se regresa un false.
+
+static ListaEstatica crearListaIndices(char caracter, int indice): Metodo que crea la lista que entrara en la pila, el caracter de apertura se mete y la posicion que tiene
+en la exprecion.
+
+
+
+
+
+Nueva clase localizada en menus llamada MenuValidaciones: Clase que manejara el menu para el usuario el cual tendra dos opciones e imprimira
+todo de forma que sea entendible para el usuario.
+Metodos:
+
+static void imprimirMenu():Metodo que imprime el menu con las 3 opciones
+
+static String pedirRutaArchivo(): Metodo que pide la ruta del archivo de texto.
+
+static String pedirExpresion(): Metodo que pide la expresion aritmetica al usuario.
+
+static void verificarArchivoJava(String ruta): Metodo que llama a el petodo de validacion de la clase ValidacionProgramas, si la pila esta vacia imprime
+que no hay ningun error, en caso contrario imprime en que linea y donde esta el error, ejemplo:
+Linea 1
+public class Matematicas {
+                         ^ Falto cerrar {
+
+static void imprimirErrorAritmentico(ListaEstatica lista): Metodo que ayuda a imprimir el error en el archivo, lo imprime con el formato de el metodo de
+arriba(de hecho este es el metodo que genera esa cadena);
+
+static void manejarMenu(): Metodo que maneja el menu de la prueba, este activara la opcion de verificar archivo si ingresas 1, si ingresas 2 el de expresiones,
+si ingresas 3  saldra del programa, y si ingresas otro numero no hara nada y te pedira numero de nuevo.
+
+
+
+
+
+Nueva clase en la carpeta pruebas llamada PruebaValidaciones:Clase que prueba la validacion llamando al menu
+Metodos:
+main(): Llama al metodo manejarMenu, de lo demas se encarga la clase menu.
+En caso de que se pida la opcion de expresion y se encuentre algo mal se marcara asi
+Ingresa la expresion aritmetica
+1*2*(4/3(5-4)+3
+    ^ Falto cerrar (
+en caso de que sea la otra opcion se pedira la ruta(la ruta de el archivo con el que lo probe es estructuras/src/herramientas/validacion/archivo.txt) se vera como el ejemplo
+que puse arriba.
+
+
+
+
+Nueva clase llamada RegresionLineal localizada en herramientas.matematicas Clase que calcula la regrecion lineal(b y p ) para la prediccion.
+Metodos:
+static ListaEstatica regresionLineal(ListaEstatica x, ListaEstatica y): Este es el metodo que llamaran las demas clases, pide los valores de x y y
+en una listaEstatica, luego hace el algoritmo descrito en el documento del examen.
+
+static ListaEstatica regresarSumatoriasDeDerivadas(ListaEstatica x, ListaEstatica y,double p , double b): Metodo que calcula las sumatorias de las derivadas
+de la formula de costo dependiendo de la derivada de theta0 y theta1. 
+
+
+
+
+
+Nueva clase llamada MenuPrediccion localizada en menus: Clase que controla las impresiones y la peticion de datos de la prediccion de costos.
+Metodos:
+static Double pedirValorX(): Metodo que pide el valor de x(numero de casas) al usuario.
+
+static void imprimirValoresYPrecio(ListaEstatica valores):
+Metodo que recibe el valor de p y b en una lista y pide el numero de habitaciones con el metodo de arriba, calcula el precio y lo imprime.
+
+static double calcularPrecio(double habitaciones,ListaEstatica valores):
+Metodo que calcula el precio sumando el valor de p + b*x(numero de habitaciones)
+
+
+
+
+Nueva clase llamada PruebaPrediccionCasa en la carpeta pruebas: Clase que llama a la clase RegresionLineal y luego con el menu pide el numero de habitaciones e imprime el resultado
+main():  obtiene la lista con los valores a y b, para despues llamar al menu prediccion y pedir el numero de habitaciones, imprimir el estimado y acabar el programa.
+ejemplo de salida:
+-42.556500622371075   10.321072751739443
+Ingresa el valor de habitaciones de su casa para calcular el precio estimado
+7
+El precio estimado de su casa es 29.69100863980502 mil Dolares

@@ -1,0 +1,5 @@
+Productos:
+	Los productos disponibles son:
+	1. Agregar Producto
+	2. Atras
+	3. Menu inicial

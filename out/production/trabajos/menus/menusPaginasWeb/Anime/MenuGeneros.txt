@@ -1,0 +1,5 @@
+Generos de anime:
+	1. Shounen
+	2. Seinen
+	3. Clasicos
+	4. Anterior

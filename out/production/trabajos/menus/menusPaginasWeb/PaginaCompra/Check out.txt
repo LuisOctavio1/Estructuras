@@ -1,0 +1,4 @@
+Check out:
+	El monto es...
+	1. Atras
+	2. Menu principal

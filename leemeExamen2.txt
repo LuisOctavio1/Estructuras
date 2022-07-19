@@ -1,0 +1,65 @@
+ArchiTexto:
+Agrege metodos para leer y escribir recursivamente, estos son 
+public static void escribirListaDinamica(ListaDinamicaDoble arreglo, String archivo):
+Metodo que llaman las demas clases, este llama al verdadero metodo recursivo.
+
+static  FileWriter escribirLista(ListaDinamicaDoble arreglo,FileWriter salida):
+Metodo que escribe en una lista lo de un documento, esto lo hace de forma recursiva.
+
+ static ListaDinamicaDoble leerListaDinamica(String archivo):
+Metodo que llaman las demas clases para leer de un documento, este llama al cerdadero metodo recursivo.
+
+static ListaDinamicaDoble leerDatos(BufferedReader buffer,ListaDinamicaDoble lista):
+Metodo que escribe el archivo en una lista dinamica doble de forma recursiva
+
+
+Class Estadistica:
+Clase que tendra metodos de calculos estadisticos
+
+static ListaDinamicaDoble distribucionNormal(ListaDinamicaDoble x,double media, double desviasionTipica): 
+Metodo que lllaman las demas clases, este lo unico que hace es llamar al verdadero metodo recursivo y regresa lo que este regresa.
+
+static ListaDinamicaDoble distribucion(ListaDinamicaDoble vacia, ListaDinamicaDoble x,double media, double desviasionTipica):
+Metodo recursivo que obtiene la distribucion normal de cada dato de nuestra lista y lo agrega a una lista nueva, luego la devuelvee
+
+static ListaDinamicaDoble calculoZ(ListaDinamicaDoble x, double media, double desviasionTipica):
+Metodo que llaman las demas clases,m lo unico que hace es inicializar unas cosas y llama al metodo recursivo, despues de que este avabe de hacer los calculos este lo regresa
+
+static ListaDinamicaDoble calculoZ(ListaDinamicaDoble nuevosDatos, ListaDinamicaDoble x,double media, double desviasionTipica):
+Metodo recursico que calcula el valor de z con la formula dada en el documento del examen, esta se guarda en una lista y se regresa.
+
+Class listaDinamicaRectangular:
+
+boolean insertarPrimero(Object objeto):
+Metodo que inserta un elemento al principoipo de la lista, regresa tru si se pudo, false en caso contrario
+
+boolean insertarUltimo(Object objeto):
+Metodo que inserta un elemento al final de la lista, regresa true si se puedo, false en caso contrario.
+
+Object eliminarFinal():
+Metodo que elimina el elemento al final de la lista, regresa el elemento eliminado o null en caso de que no se hay eliminado nada.
+
+Object eliminarInicio():
+Metodo que elimina el elemento del inicio, regrea el elemento o null si no se elimino nada
+void imprimir():
+Metodo que imprime la lista de la siguiente forma:
+30 -> 3 -> 10 -> 15 -> null
+|    |    |    |    
+22 -> 4 -> 21 -> 18 -> null
+intentado simular como se ve el ejemplo de el documento del examen.
+
+Object buscar(Object objecto):
+Metodo que busca un elemento en la lista, si lo encuentra lo regresa, en caso contrario null.
+
+Object eliminar(Object objecto):
+Metodo que elimina el elemento especifcado, lo regresa si lo elimino, en caso contrario null.
+
+
+
+class PruebaDistribucion:
+Hace los calculos que se pideron en el documento, con los cuales se hicieron las graficas en excel incluidas en el archivo rar
+
+class PruebaListaDinamicaRectangular
+Simplemente prueba el funcionamiento de la clase ListaDinamicaRectangular con algunas inserciones, elimionaciones etc.
+
+La actividad uno se encuentra en el archivo rar en una imagen llamada recursionExamen2
